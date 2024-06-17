@@ -1,0 +1,20 @@
+from aiogram.dispatcher.filters.state import State, StatesGroup
+
+class FSMAdmin(StatesGroup):
+    beginning = State()
+    choosing_action = State()
+    choosing_store = State()
+    choosing_responsible = State()
+    typing_storage_name = State()
+    typing_storage_dump_url = State()
+    typing_storage_address = State()
+    typing_storage_contacts = State()
+    typing_responsible_name = State()
+    typing_responsible_username = State()
+    choosing_action_with_store = State()
+    choosing_action_with_responsible = State()
+    typing_new_stor_name = State()
+    typing_new_link = State()
+    typing_new_address = State()
+    typing_new_phone = State()
+    choosing_responsible_for_storage = State()
