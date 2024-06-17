@@ -26,6 +26,8 @@ async def main_func(dp: Dispatcher):
 @dp.message_handler(filters.Text(contains='Начало'),state='*')
 @dp.message_handler(commands=["admin"], state="*")
 async def handle_message(message: types.Message, state:FSMContext):
+    if message.from_user.id not in [6504953119,225529144]:
+        return 
     await BotAdmin.ReturnToAdminMenu(bot, message)
 
     

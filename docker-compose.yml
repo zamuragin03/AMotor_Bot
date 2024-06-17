@@ -1,0 +1,10 @@
+version: "3"
+
+services:
+  dnr_bot:
+    container_name: DNR_Bot
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ./db_vol/:/app/db_vol/
