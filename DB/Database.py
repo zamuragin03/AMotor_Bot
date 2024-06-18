@@ -89,7 +89,7 @@ where s.name="{name}"
     def GetAllDismaLinksWithInfo(self,):
         with sqlite3.connect(self.db_name) as connection:
             cursor = connection.cursor()
-            cursor.execute(f"SELECT dump_url, name, address, contacts from storage where storage.dump_url like '%disma%'")
+            cursor.execute(f"SELECT dump_url, name, address, contacts from storage where storage.dump_url like '%disma%' and storage.dump_url NOT like '%xml' ")
             records = cursor.fetchall()
         return records
     
@@ -103,7 +103,7 @@ where s.name="{name}"
     def GetAllBazonLinksWithInfo(self,):
         with sqlite3.connect(self.db_name) as connection:
             cursor = connection.cursor()
-            cursor.execute(f"SELECT dump_url, name, address, contacts from storage where storage.dump_url like '%baz%'")
+            cursor.execute(f"SELECT dump_url, name, address, contacts from storage where storage.dump_url like '%baz%'  and storage.dump_url NOT like '%xml'")
             records = cursor.fetchall()
         return records
     

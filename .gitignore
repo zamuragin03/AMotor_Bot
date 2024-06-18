@@ -1,4 +1,5 @@
 Config/config.ini
 Test
 db_vol/db.db
+db_vol/debug.log
 venv
