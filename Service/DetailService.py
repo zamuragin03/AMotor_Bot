@@ -11,12 +11,15 @@ class BazonService:
     def UpdatedDB(self,):
         all_links = StorageService.GetBazonLinksWithInfo()
         for obj in all_links:
-            response = requests.get(obj[0])
-            data = io.BytesIO(response.content)
-            self.dataframes.append({
-                'info':obj[1],
-                'df':pd.read_csv(data, encoding='cp1251', delimiter=';')
-                })
+            try:
+                response = requests.get(obj[0])
+                data = io.BytesIO(response.content)
+                self.dataframes.append({
+                    'info':obj[1],
+                    'df':pd.read_csv(data, encoding='cp1251', delimiter=';')
+                    })
+            except:
+                ...
     
     def FindInBazon(self,findBy):
         return_obj ={
@@ -44,12 +47,15 @@ class DismaService:
     def UpdatedDB(self,):
         all_links = StorageService.GetDismaLinksWithInfo()
         for obj in all_links:
-            response = requests.get(obj[0])
-            data = io.BytesIO(response.content)
-            self.dataframes.append({
-                'info':obj[1],
-                'df':pd.read_excel(data)
-                })
+            try:
+                response = requests.get(obj[0])
+                data = io.BytesIO(response.content)
+                self.dataframes.append({
+                    'info':obj[1],
+                    'df':pd.read_excel(data)
+                    })
+            except:
+                ...
     
     
     def FindInDisma(self,findBy):
