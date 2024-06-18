@@ -46,7 +46,17 @@ class StorageService:
 
     def GetStoreInfo(stor_name):
         stor = DB.GetStoreInfo(stor_name)
-        return f'{stor[0]}. {stor[1]}\nАдрес: {stor[6]}\nКонтакты: {stor[7]}\nСсылка: {stor[2]}\n\n'
+        return f'''
+{stor[0]}.{stor[1]}
+Адрес: {stor[6]}
+Контакты: {stor[7]}
+Отвествтвенные: 
+
+1. {stor[8] if stor[8] else 'Не установлен'}
+2. {stor[9] if stor[9] else 'Не установлен'}
+3. {stor[10] if stor[10] else 'Не установлен'}
+
+Ссылка: {stor[2]}\n'''
 
     def AddStorage(name, dump_url,address, contacts):
         DB.AddStorage(name, dump_url,address, contacts)

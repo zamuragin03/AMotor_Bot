@@ -23,10 +23,21 @@ async def main_func(dp: Dispatcher):
     bazonService.UpdatedDB()
     dismaService.UpdatedDB()
     
+@dp.message_handler(commands=["test"], state="*")
+async def handle_message(message: types.Message, state:FSMContext):
+    async with state.proxy() as data:
+        await bot.send_message(
+        message.chat.id,
+        text=str(data),
+    )
+
+    
 @dp.message_handler(filters.Text(contains='Начало'),state='*')
 @dp.message_handler(commands=["admin"], state="*")
 async def handle_message(message: types.Message, state:FSMContext):
     if message.from_user.id not in [6504953119,225529144]:
+        return 
+    if message.message_thread_id in [20108,20106]:
         return 
     await BotAdmin.ReturnToAdminMenu(bot, message)
 
@@ -35,7 +46,6 @@ async def handle_message(message: types.Message, state:FSMContext):
 
 # 20108 -- для переписки с ботом
 # 20106 -- для ручных запросов
-
 @dp.message_handler()
 async def handle_message(message: types.Message, state:FSMContext):
     if message.message_thread_id ==20108:
@@ -57,6 +67,16 @@ async def handle_message(message: types.Message, state:FSMContext):
         media=photos,
     )
 
+
+@dp.message_handler(filters.Text(contains='Выйти'), state=FSMAdmin.choosing_action)
+async def handle_message(message: types.Message, state:FSMContext):
+    await bot.send_message(
+            message.from_user.id,
+            f'Вы вышли из админ меню',
+            reply_markup=Keyboards.remove()
+        )
+    await state.reset_data()
+    await state.reset_state()
 
 @dp.message_handler(filters.Text(equals='Добавить ответственного'), state=FSMAdmin.choosing_action)
 async def handle_message(message: types.Message, state:FSMContext):
@@ -324,14 +344,32 @@ async def handle_message(message: types.Message, state:FSMContext):
     await FSMAdmin.choosing_responsible_for_storage.set()
     
 @dp.message_handler(
+    filters.Text(equals="Снять"),
+    state=FSMAdmin.choosing_responsible_for_storage
+    )
+async def handle_message(message: types.Message, state:FSMContext):
+    async with state.proxy() as data:
+        StorageService.SetResponsiblForStorageIdById(
+            data['selected_responsible_id'],
+            'NULL',
+            data['storage']   
+        )
+    await bot.send_message(
+            message.from_user.id,
+            f'Ответственный снят',
+            reply_markup=Keyboards.remove()
+        )
+    await BotAdmin.ReturnToAdminMenu(bot,message)
+    
+@dp.message_handler(
     lambda x : int(x.text.replace(' ', '').split('–')[0]) in ResponsibleService.getResponsiblesIDs(), 
     state=FSMAdmin.choosing_responsible_for_storage
     )
 async def handle_message(message: types.Message, state:FSMContext):
     async with state.proxy() as data:
         StorageService.SetResponsiblForStorageIdById(
-            int(message.text.replace(' ', '').split('–')[0]),
             data['selected_responsible_id'],
+            int(message.text.replace(' ', '').split('–')[0]),
             data['storage']   
         )
     await BotAdmin.ReturnToAdminMenu(bot,message)

@@ -8,6 +8,7 @@ class Keyboards:
     def GetAdminKb():
         admin_filter = ReplyKeyboardMarkup(
             one_time_keyboard=False, resize_keyboard=True)
+        admin_filter.row(KeyboardButton('Выйти'))
         options = ['Посмотреть все склады', 'Посмотреть всех ответственных']
         admin_filter.row(KeyboardButton('Добавить ответственного'))
         admin_filter.row(KeyboardButton('Добавить склад'))
@@ -30,7 +31,7 @@ class Keyboards:
         resp_kb = ReplyKeyboardMarkup(
             one_time_keyboard=False, resize_keyboard=True)
         resp_kb.row(KeyboardButton('⬅Начало⬅'))
-        
+        resp_kb.row(KeyboardButton('Снять'))
         for option in ResponsibleService.getResponsibleNames():
             btn = KeyboardButton(text=option)
             resp_kb.row(btn)
