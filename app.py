@@ -60,12 +60,12 @@ async def handle_message(message: types.Message, state:FSMContext):
     )
     elif message.message_thread_id==20106:
         res = SearchService.FindDetail(message.text)
-        photos = BotService.CreateMediaGroup(res.get('photos'), res.get('text') + f'\nЗапрос: {message.from_user.first_name} {message.from_user.last_name} @{message.from_user.username}')
-        await bot.send_media_group(
-        message.chat.id,
-        message_thread_id=20106,
-        media=photos,
-    )
+        await BotService.SendMessageWithMediaGroup(bot, message,res)
+    elif message.chat.type=='private':
+        res = SearchService.FindDetail(message.text)
+        await BotService.SendMessageWithMediaGroup(bot, message,res)
+
+    
 
 
 @dp.message_handler(filters.Text(contains='Выйти'), state=FSMAdmin.choosing_action)
@@ -146,6 +146,8 @@ async def handle_message(message: types.Message, state:FSMContext):
             reply_markup=Keyboards.remove()
         )
     await BotAdmin.ReturnToAdminMenu(bot, message)
+    bazonService.UpdatedDB()
+    dismaService.UpdatedDB()
 
 
 @dp.message_handler(state=FSMAdmin.typing_responsible_name)

@@ -21,11 +21,11 @@ class StorageService:
 
     def GetDismaLinksWithInfo():
         disma_links = DB.GetAllDismaLinksWithInfo()
-        return [(el[0], f'{el[1]}\n🏘{el[2]}\n📞{el[3]}') for el in disma_links]
+        return [(el[0], f'{el[1]}\n{el[2]}\n{el[3]}') for el in disma_links]
 
     def GetBazonLinksWithInfo():
         bazon_links = DB.GetAllBazonLinksWithInfo()
-        return [(el[0], f'{el[1]}\n🏘{el[2]}\n📞{el[3]}') for el in bazon_links]
+        return [(el[0], f'{el[1]}\n{el[2]}\n{el[3]}') for el in bazon_links]
 
     def getStorageNames():
         names = DB.GetAllStoragesNames()

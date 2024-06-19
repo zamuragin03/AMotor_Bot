@@ -34,7 +34,7 @@ class BazonService:
                 if total_obj>5:
                     break
                 return_obj['photos'].append(str(row['Фото']).split(',')[0])
-                return_obj['text'].append(f"{total_obj}.{row['Наименование']}\n{row['Марка']} {row['Модель']}\nОЕМ: {row['Номер']}\n\n{row['Цена']}₽\nКонтакты:\n{stor.get('info')}\n\n")
+                return_obj['text'].append(f"{total_obj}.{row['Наименование']} ({row['Новый/БУ']})\n{row['Марка']} {row['Модель']}\nОЕМ: {row['Номер']}\n\n{row['Цена']}₽\nКонтакты:\n{stor.get('info')}\n\n")
                 total_obj+=1
         return return_obj
             
@@ -71,7 +71,7 @@ class DismaService:
                 if total_obj>5:
                     break
                 return_obj['photos'].append(str(row['Фотографии']).split(',')[0])
-                return_obj['text'].append(f"{total_obj}. {row['Название']}\nПрименимость:{row['Применимость'][:25]}...\nОЕМ:{row['Номер OEM']}\n{row['Цена']}₽\nКонтакты:\n{stor.get('info')}\n\n")
+                return_obj['text'].append(f"{total_obj}. {row['Название']} ({row['Состояние']})\nПрименимость:{row['Применимость'][:25]}...\nОЕМ:{row['Номер OEM']}\n{row['Цена']}₽\nКонтакты:\n{stor.get('info')}\n\n")
                 total_obj+=1
         return return_obj
         
