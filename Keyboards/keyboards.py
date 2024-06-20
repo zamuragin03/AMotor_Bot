@@ -22,20 +22,22 @@ class Keyboards:
             one_time_keyboard=False, resize_keyboard=True)
         storages_kb.row(KeyboardButton('⬅Начало⬅'))
         
-        for option in StorageService.getStorageNames():
+        for option in StorageService.getStorageNamesWithIDs():
             btn = KeyboardButton(text=option)
             storages_kb.row(btn)
         return storages_kb
 
-    def GetResponsiblesKb():
+    def GetResponsiblesKb(removable:bool=False):
         resp_kb = ReplyKeyboardMarkup(
             one_time_keyboard=False, resize_keyboard=True)
         resp_kb.row(KeyboardButton('⬅Начало⬅'))
-        resp_kb.row(KeyboardButton('Снять'))
+        if removable:
+            resp_kb.row(KeyboardButton('Снять'))
         for option in ResponsibleService.getResponsibleNames():
             btn = KeyboardButton(text=option)
             resp_kb.row(btn)
         return resp_kb
+    
 
     def ActionsWithStorageKb():
         actions_kb = ReplyKeyboardMarkup(

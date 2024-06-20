@@ -21,7 +21,7 @@ LEFT JOIN responsible r3 ON s.responsible_3_id = r3.id;''')
             records = cursor.fetchall()
         return records
     
-    def GetStoreInfo(self,name):
+    def GetStoreInfo(self,stor_id):
         with sqlite3.connect(self.db_name) as connection:
             cursor = connection.cursor()
             cursor.execute(f'''
@@ -32,7 +32,7 @@ LEFT JOIN responsible r3 ON s.responsible_3_id = r3.id;''')
 LEFT JOIN responsible r1 ON s.responsible_1_id = r1.id
 LEFT JOIN responsible r2 ON s.responsible_2_id = r2.id
 LEFT JOIN responsible r3 ON s.responsible_3_id = r3.id
-where s.name="{name}"
+where s.id="{stor_id}"
                            
                            ''')
             record = cursor.fetchone()
@@ -81,10 +81,10 @@ where s.name="{name}"
             cursor = connection.cursor()
             cursor.execute(f'delete from storage where name="{storename}"')
     
-    def SetResponsiblForStorageIdById(self, number,respId, storageName):
+    def SetResponsiblForStorageIdById(self, number,respId, storageId):
         with sqlite3.connect(self.db_name) as connection:
             cursor = connection.cursor()
-            cursor.execute(f'UPDATE storage set responsible_{number}_id = {respId} where storage.name="{storageName}" ')
+            cursor.execute(f'UPDATE storage set responsible_{number}_id = {respId} where storage.id={storageId} ')
     
     def GetAllDismaLinksWithInfo(self,):
         with sqlite3.connect(self.db_name) as connection:
@@ -96,7 +96,7 @@ where s.name="{name}"
     def GetAllStoragesNames(self,):
         with sqlite3.connect(self.db_name) as connection:
             cursor = connection.cursor()
-            cursor.execute(f"SELECT name from storage ")
+            cursor.execute(f"SELECT id,name from storage ")
             records = cursor.fetchall()
         return records
     

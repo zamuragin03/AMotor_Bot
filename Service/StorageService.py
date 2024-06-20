@@ -27,9 +27,9 @@ class StorageService:
         bazon_links = DB.GetAllBazonLinksWithInfo()
         return [(el[0], f'{el[1]}\n{el[2]}\n{el[3]}') for el in bazon_links]
 
-    def getStorageNames():
+    def getStorageNamesWithIDs():
         names = DB.GetAllStoragesNames()
-        return [el[0] for el in names]
+        return [f'{el[0]}-{el[1]}' for el in names]
         
 
     def ChangeStorName(old_name, new_name):
@@ -44,8 +44,8 @@ class StorageService:
     def ChangeStorContacts(old_name, new_contacts):
         return DB.changeStoreContact(old_name, new_contacts)
 
-    def GetStoreInfo(stor_name):
-        stor = DB.GetStoreInfo(stor_name)
+    def GetStoreInfo(stor_id):
+        stor = DB.GetStoreInfo(stor_id)
         return f'''
 {stor[0]}.{stor[1]}
 Адрес: {stor[6]}
@@ -64,5 +64,5 @@ class StorageService:
     def DeleteStorage(storName):
         DB.DeleteStoreByName(storName)
     
-    def SetResponsiblForStorageIdById(number,respId, storageName):
-        DB.SetResponsiblForStorageIdById(number,respId, storageName)
+    def SetResponsiblForStorageIdById(number,respId, storageId):
+        DB.SetResponsiblForStorageIdById(number,respId, storageId)

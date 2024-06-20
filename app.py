@@ -223,11 +223,15 @@ async def handle_message(message: types.Message, state:FSMContext):
     await FSMAdmin.choosing_store.set()
     
     
-@dp.message_handler(filters.Text(equals=StorageService.getStorageNames()), state=FSMAdmin.choosing_store)
+@dp.message_handler(state=FSMAdmin.choosing_store)
 async def handle_message(message: types.Message, state:FSMContext):
+    storage_names_with_ids = StorageService.getStorageNamesWithIDs()
+    if message.text not in storage_names_with_ids:
+        return
     async with state.proxy() as data:
-        data['storage'] = message.text
-    stor_info = StorageService.GetStoreInfo(message.text)
+        storageId = message.text.split('-')[0]
+        data['storage'] = storageId
+    stor_info = StorageService.GetStoreInfo(data['storage'])
     await bot.send_message(
             message.from_user.id,
             f'Выберите действие со складом\n{stor_info}',
@@ -267,7 +271,7 @@ async def handle_message(message: types.Message, state:FSMContext):
             f'Назвние ({message.text}) для склада установлено',
             reply_markup=Keyboards.ActionsWithStorageKb()
         )
-    stor_info = StorageService.GetStoreInfo(message.text)
+    stor_info = StorageService.GetStoreInfo(data['storage'])
     await bot.send_message(
             message.from_user.id,
             f'Выберите действие со складом\n{stor_info}',
@@ -341,7 +345,7 @@ async def handle_message(message: types.Message, state:FSMContext):
     await bot.send_message(
             message.from_user.id,
             f'Выберите ответственного #{resp_number}',
-            reply_markup=Keyboards.GetResponsiblesKb()
+            reply_markup=Keyboards.GetResponsiblesKb(True)
         )
     await FSMAdmin.choosing_responsible_for_storage.set()
     
