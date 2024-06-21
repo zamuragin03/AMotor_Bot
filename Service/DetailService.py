@@ -9,6 +9,7 @@ class BazonService:
         self.UpdatedDB()
         
     def UpdatedDB(self,):
+        self.dataframes=[]
         all_links = StorageService.GetBazonLinksWithInfo()
         for obj in all_links:
             try:
@@ -45,6 +46,7 @@ class DismaService:
         self.UpdatedDB()
         
     def UpdatedDB(self,):
+        self.dataframes=[]
         all_links = StorageService.GetDismaLinksWithInfo()
         for obj in all_links:
             try:
