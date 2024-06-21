@@ -1,141 +1,28 @@
-2024-06-21 20:26:31,544 - DEBUG - /etc/localtime found
-2024-06-21 20:26:31,546 - DEBUG - 1 found:
+2024-06-22 00:37:49,928 - DEBUG - /etc/localtime found
+2024-06-22 00:37:49,932 - DEBUG - 1 found:
  {'/etc/localtime is a symlink to': 'Europe/Moscow'}
-2024-06-21 20:26:32,157 - DEBUG - Starting new HTTPS connection (1): disma.allparts.tech:443
-2024-06-21 20:26:32,382 - DEBUG - https://disma.allparts.tech:443 "GET /feeds/custom/XXGt4ekG2Jpib4v3u8y63a HTTP/1.1" 200 634963
-2024-06-21 20:26:32,972 - DEBUG - Starting new HTTPS connection (1): baz-on.ru:443
-2024-06-21 20:26:33,206 - DEBUG - https://baz-on.ru:443 "GET /export/c3383/712d7/gadnr-drom.csv HTTP/1.1" 200 None
-2024-06-21 20:26:33,381 - DEBUG - Starting new HTTPS connection (1): baz-on.ru:443
-2024-06-21 20:26:33,535 - DEBUG - https://baz-on.ru:443 "GET /export/c2933/17834/autoschrott-drom.csv HTTP/1.1" 200 None
-2024-06-21 20:26:33,613 - DEBUG - Using selector: KqueueSelector
-2024-06-21 20:26:33,614 - INFO - Scheduler started
-2024-06-21 20:26:33,615 - INFO - Added job "main_func" to job store "default"
-2024-06-21 20:26:33,615 - DEBUG - Looking for jobs to run
-2024-06-21 20:26:33,615 - DEBUG - Next wakeup is due at 2024-06-21 21:26:33.614893+03:00 (in 3599.999581 seconds)
-2024-06-21 20:26:33,615 - DEBUG - Looking for jobs to run
-2024-06-21 20:26:33,615 - DEBUG - Next wakeup is due at 2024-06-21 21:26:33.614893+03:00 (in 3599.999455 seconds)
-2024-06-21 20:26:33,615 - DEBUG - Make request: "getMe" with data: "{}" and files "None"
-2024-06-21 20:26:33,778 - DEBUG - Response for getMe: [200] "'{"ok":true,"result":{"id":7231108478,"is_bot":true,"first_name":"\\u0410\\u0411\\u043e\\u0442\\u0430 - \\u043d\\u0435\\u0439\\u0440\\u043e\\u0441\\u043e\\u0442\\u0440\\u0443\\u0434\\u043d\\u0438\\u0446\\u0430 \\u0410\\u041c\\u043e\\u0442\\u043e\\u0440\\u0441","username":"AMotorsDNR_bot","can_join_groups":true,"can_read_all_group_messages":false,"supports_inline_queries":false,"can_connect_to_business":false}}'"
-2024-06-21 20:26:33,779 - INFO - Bot: АБота - нейросотрудница АМоторс [@AMotorsDNR_bot]
-2024-06-21 20:26:33,779 - INFO - Start polling.
-2024-06-21 20:26:33,779 - DEBUG - Make request: "getWebhookInfo" with data: "{}" and files "None"
-2024-06-21 20:26:33,830 - DEBUG - Response for getWebhookInfo: [200] "'{"ok":true,"result":{"url":"","has_custom_certificate":false,"pending_update_count":1}}'"
-2024-06-21 20:26:33,830 - DEBUG - Make request: "getUpdates" with data: "{'timeout': 20}" and files "None"
-2024-06-21 20:26:33,880 - DEBUG - Response for getUpdates: [200] "'{"ok":true,"result":[{"update_id":720110971,\n"message":{"message_id":3035,"from":{"id":225529144,"is_bot":false,"first_name":"I","username":"igor_just_igor","language_code":"ru","is_premium":true},"chat":{"id":225529144,"first_name":"I","username":"igor_just_igor","type":"private"},"date":1718990792,"text":"/admin","entities":[{"offset":0,"length":6,"type":"bot_command"}]}}]}'"
-2024-06-21 20:26:33,880 - DEBUG - Received 1 updates.
-2024-06-21 20:26:33,881 - DEBUG - Make request: "sendMessage" with data: "{'chat_id': 225529144, 'text': 'Выберите действие', 'reply_markup': '{"keyboard": [[{"text": "Выйти"}], [{"text": "Добавить ответственного"}], [{"text": "Добавить склад"}], [{"text": "Посмотреть все склады"}, {"text": "Посмотреть всех ответственных"}]], "resize_keyboard": true, "one_time_keyboard": false}'}" and files "None"
-2024-06-21 20:26:33,982 - DEBUG - Make request: "getUpdates" with data: "{'offset': 720110972, 'timeout': 20}" and files "None"
-2024-06-21 20:26:34,087 - DEBUG - Response for sendMessage: [200] "'{"ok":true,"result":{"message_id":3036,"from":{"id":7231108478,"is_bot":true,"first_name":"\\u0410\\u0411\\u043e\\u0442\\u0430 - \\u043d\\u0435\\u0439\\u0440\\u043e\\u0441\\u043e\\u0442\\u0440\\u0443\\u0434\\u043d\\u0438\\u0446\\u0430 \\u0410\\u041c\\u043e\\u0442\\u043e\\u0440\\u0441","username":"AMotorsDNR_bot"},"chat":{"id":225529144,"first_name":"I","username":"igor_just_igor","type":"private"},"date":1718990794,"text":"\\u0412\\u044b\\u0431\\u0435\\u0440\\u0438\\u0442\\u0435 \\u0434\\u0435\\u0439\\u0441\\u0442\\u0432\\u0438\\u0435"}}'"
-2024-06-21 20:26:38,952 - DEBUG - Response for getUpdates: [200] "'{"ok":true,"result":[{"update_id":720110972,\n"message":{"message_id":3037,"from":{"id":225529144,"is_bot":false,"first_name":"I","username":"igor_just_igor","language_code":"ru","is_premium":true},"chat":{"id":225529144,"first_name":"I","username":"igor_just_igor","type":"private"},"date":1718990798,"text":"\\u041f\\u043e\\u0441\\u043c\\u043e\\u0442\\u0440\\u0435\\u0442\\u044c \\u0432\\u0441\\u0435 \\u0441\\u043a\\u043b\\u0430\\u0434\\u044b"}}]}'"
-2024-06-21 20:26:38,954 - DEBUG - Received 1 updates.
-2024-06-21 20:26:38,959 - DEBUG - Make request: "sendMessage" with data: "{'chat_id': 225529144, 'text': 'Склады\n\n21.АМоторс Донецк Ленинский (Б)\nАдрес: Донецк - пр-кт Ленинский, д. 41\nКонтакты: +7 949 590 27 78\nОтвествтвенные: \n\n1. GAuto Валентин: +7 949 590 27 78\n2. GAuto Отдел Продаж: +7 949 507 06 80\n3. Не установлен\n\nСсылка: https://baz-on.ru/export/c3383/712d7/gadnr-drom.csv\n\n22.АМоторс Донецк Ленинский (Д)\nАдрес: Донецк - пр-кт Ленинский, д. 41\nКонтакты: +7 949 590 27 78\nОтвествтвенные: \n\n1. GAuto Валентин: +7 949 590 27 78\n2. GAuto Отдел Продаж: +7 949 507 06 80\n3. Не установлен\n\nСсылка: https://disma.allparts.tech/feeds/custom/XXGt4ekG2Jpib4v3u8y63a\n\n23.АМоторс Ростов\nАдрес: Королева пр-т 5/4 склад 60,61\nКонтакты: +7 938 876 12 20\nОтвествтвенные: \n\n1. АМоторс Вячеслав (ОП): +7 938 876 12 20\n2. АМоторс Роман (ОП): +7 905 428 29 59\n3. АМоторс Склад (СД): +7 918 548 94 20\n\nСсылка: https://baz-on.ru/export/c2933/17834/autoschrott-drom.csv\n', 'reply_markup': '{"keyboard": [[{"text": "⬅Начало⬅"}], [{"text": "21-АМоторс Донецк Ленинский (Б)"}], [{"text": "22-АМоторс Донецк Ленинский (Д)"}], [{"text": "23-АМоторс Ростов"}]], "resize_keyboard": true, "one_time_keyboard": false}'}" and files "None"
-2024-06-21 20:26:39,055 - DEBUG - Make request: "getUpdates" with data: "{'offset': 720110973, 'timeout': 20}" and files "None"
-2024-06-21 20:26:39,110 - DEBUG - Response for sendMessage: [200] "'{"ok":true,"result":{"message_id":3038,"from":{"id":7231108478,"is_bot":true,"first_name":"\\u0410\\u0411\\u043e\\u0442\\u0430 - \\u043d\\u0435\\u0439\\u0440\\u043e\\u0441\\u043e\\u0442\\u0440\\u0443\\u0434\\u043d\\u0438\\u0446\\u0430 \\u0410\\u041c\\u043e\\u0442\\u043e\\u0440\\u0441","username":"AMotorsDNR_bot"},"chat":{"id":225529144,"first_name":"I","username":"igor_just_igor","type":"private"},"date":1718990799,"text":"\\u0421\\u043a\\u043b\\u0430\\u0434\\u044b\\n\\n21.\\u0410\\u041c\\u043e\\u0442\\u043e\\u0440\\u0441 \\u0414\\u043e\\u043d\\u0435\\u0446\\u043a \\u041b\\u0435\\u043d\\u0438\\u043d\\u0441\\u043a\\u0438\\u0439 (\\u0411)\\n\\u0410\\u0434\\u0440\\u0435\\u0441: \\u0414\\u043e\\u043d\\u0435\\u0446\\u043a - \\u043f\\u0440-\\u043a\\u0442 \\u041b\\u0435\\u043d\\u0438\\u043d\\u0441\\u043a\\u0438\\u0439, \\u0434. 41\\n\\u041a\\u043e\\u043d\\u0442\\u0430\\u043a\\u0442\\u044b: +7 949 590 27 78\\n\\u041e\\u0442\\u0432\\u0435\\u0441\\u0442\\u0432\\u0442\\u0432\\u0435\\u043d\\u043d\\u044b\\u0435: \\n\\n1. GAuto \\u0412\\u0430\\u043b\\u0435\\u043d\\u0442\\u0438\\u043d: +7 949 590 27 78\\n2. GAuto \\u041e\\u0442\\u0434\\u0435\\u043b \\u041f\\u0440\\u043e\\u0434\\u0430\\u0436: +7 949 507 06 80\\n3. \\u041d\\u0435 \\u0443\\u0441\\u0442\\u0430\\u043d\\u043e\\u0432\\u043b\\u0435\\u043d\\n\\n\\u0421\\u0441\\u044b\\u043b\\u043a\\u0430: https://baz-on.ru/export/c3383/712d7/gadnr-drom.csv\\n\\n22.\\u0410\\u041c\\u043e\\u0442\\u043e\\u0440\\u0441 \\u0414\\u043e\\u043d\\u0435\\u0446\\u043a \\u041b\\u0435\\u043d\\u0438\\u043d\\u0441\\u043a\\u0438\\u0439 (\\u0414)\\n\\u0410\\u0434\\u0440\\u0435\\u0441: \\u0414\\u043e\\u043d\\u0435\\u0446\\u043a - \\u043f\\u0440-\\u043a\\u0442 \\u041b\\u0435\\u043d\\u0438\\u043d\\u0441\\u043a\\u0438\\u0439, \\u0434. 41\\n\\u041a\\u043e\\u043d\\u0442\\u0430\\u043a\\u0442\\u044b: +7 949 590 27 78\\n\\u041e\\u0442\\u0432\\u0435\\u0441\\u0442\\u0432\\u0442\\u0432\\u0435\\u043d\\u043d\\u044b\\u0435: \\n\\n1. GAuto \\u0412\\u0430\\u043b\\u0435\\u043d\\u0442\\u0438\\u043d: +7 949 590 27 78\\n2. GAuto \\u041e\\u0442\\u0434\\u0435\\u043b \\u041f\\u0440\\u043e\\u0434\\u0430\\u0436: +7 949 507 06 80\\n3. \\u041d\\u0435 \\u0443\\u0441\\u0442\\u0430\\u043d\\u043e\\u0432\\u043b\\u0435\\u043d\\n\\n\\u0421\\u0441\\u044b\\u043b\\u043a\\u0430: https://disma.allparts.tech/feeds/custom/XXGt4ekG2Jpib4v3u8y63a\\n\\n23.\\u0410\\u041c\\u043e\\u0442\\u043e\\u0440\\u0441 \\u0420\\u043e\\u0441\\u0442\\u043e\\u0432\\n\\u0410\\u0434\\u0440\\u0435\\u0441: \\u041a\\u043e\\u0440\\u043e\\u043b\\u0435\\u0432\\u0430 \\u043f\\u0440-\\u0442 5/4 \\u0441\\u043a\\u043b\\u0430\\u0434 60,61\\n\\u041a\\u043e\\u043d\\u0442\\u0430\\u043a\\u0442\\u044b: +7 938 876 12 20\\n\\u041e\\u0442\\u0432\\u0435\\u0441\\u0442\\u0432\\u0442\\u0432\\u0435\\u043d\\u043d\\u044b\\u0435: \\n\\n1. \\u0410\\u041c\\u043e\\u0442\\u043e\\u0440\\u0441 \\u0412\\u044f\\u0447\\u0435\\u0441\\u043b\\u0430\\u0432 (\\u041e\\u041f): +7 938 876 12 20\\n2. \\u0410\\u041c\\u043e\\u0442\\u043e\\u0440\\u0441 \\u0420\\u043e\\u043c\\u0430\\u043d (\\u041e\\u041f): +7 905 428 29 59\\n3. \\u0410\\u041c\\u043e\\u0442\\u043e\\u0440\\u0441 \\u0421\\u043a\\u043b\\u0430\\u0434 (\\u0421\\u0414): +7 918 548 94 20\\n\\n\\u0421\\u0441\\u044b\\u043b\\u043a\\u0430: https://baz-on.ru/export/c2933/17834/autoschrott-drom.csv","entities":[{"offset":226,"length":51,"type":"url"},{"offset":497,"length":63,"type":"url"},{"offset":794,"length":57,"type":"url"}]}}'"
-2024-06-21 20:26:41,860 - DEBUG - Response for getUpdates: [200] "'{"ok":true,"result":[{"update_id":720110973,\n"message":{"message_id":3039,"from":{"id":225529144,"is_bot":false,"first_name":"I","username":"igor_just_igor","language_code":"ru","is_premium":true},"chat":{"id":225529144,"first_name":"I","username":"igor_just_igor","type":"private"},"date":1718990801,"text":"self.dataframes=[]"}}]}'"
-2024-06-21 20:26:41,860 - DEBUG - Received 1 updates.
-2024-06-21 20:26:41,961 - DEBUG - Make request: "getUpdates" with data: "{'offset': 720110974, 'timeout': 20}" and files "None"
-2024-06-21 20:26:48,146 - DEBUG - Response for getUpdates: [200] "'{"ok":true,"result":[{"update_id":720110974,\n"message":{"message_id":3040,"from":{"id":225529144,"is_bot":false,"first_name":"I","username":"igor_just_igor","language_code":"ru","is_premium":true},"chat":{"id":225529144,"first_name":"I","username":"igor_just_igor","type":"private"},"date":1718990808,"text":"GJ6A66830"}}]}'"
-2024-06-21 20:26:48,150 - DEBUG - Received 1 updates.
-2024-06-21 20:26:48,252 - DEBUG - Make request: "getUpdates" with data: "{'offset': 720110975, 'timeout': 20}" and files "None"
-2024-06-21 20:27:08,312 - DEBUG - Response for getUpdates: [200] "'{"ok":true,"result":[]}'"
-2024-06-21 20:27:08,417 - DEBUG - Make request: "getUpdates" with data: "{'offset': 720110975, 'timeout': 20}" and files "None"
-2024-06-21 20:27:28,518 - DEBUG - Response for getUpdates: [200] "'{"ok":true,"result":[]}'"
-2024-06-21 20:27:28,621 - DEBUG - Make request: "getUpdates" with data: "{'offset': 720110975, 'timeout': 20}" and files "None"
-2024-06-21 20:27:48,703 - DEBUG - Response for getUpdates: [200] "'{"ok":true,"result":[]}'"
-2024-06-21 20:27:48,807 - DEBUG - Make request: "getUpdates" with data: "{'offset': 720110975, 'timeout': 20}" and files "None"
-2024-06-21 20:28:08,899 - DEBUG - Response for getUpdates: [200] "'{"ok":true,"result":[]}'"
-2024-06-21 20:28:09,003 - DEBUG - Make request: "getUpdates" with data: "{'offset': 720110975, 'timeout': 20}" and files "None"
-2024-06-21 20:28:29,153 - DEBUG - Response for getUpdates: [200] "'{"ok":true,"result":[]}'"
-2024-06-21 20:28:29,258 - DEBUG - Make request: "getUpdates" with data: "{'offset': 720110975, 'timeout': 20}" and files "None"
-2024-06-21 20:28:49,322 - DEBUG - Response for getUpdates: [200] "'{"ok":true,"result":[]}'"
-2024-06-21 20:28:49,427 - DEBUG - Make request: "getUpdates" with data: "{'offset': 720110975, 'timeout': 20}" and files "None"
-2024-06-21 20:29:09,485 - DEBUG - Response for getUpdates: [200] "'{"ok":true,"result":[]}'"
-2024-06-21 20:29:09,587 - DEBUG - Make request: "getUpdates" with data: "{'offset': 720110975, 'timeout': 20}" and files "None"
-2024-06-21 20:29:29,650 - DEBUG - Response for getUpdates: [200] "'{"ok":true,"result":[]}'"
-2024-06-21 20:29:29,753 - DEBUG - Make request: "getUpdates" with data: "{'offset': 720110975, 'timeout': 20}" and files "None"
-2024-06-21 20:29:49,809 - DEBUG - Response for getUpdates: [200] "'{"ok":true,"result":[]}'"
-2024-06-21 20:29:49,913 - DEBUG - Make request: "getUpdates" with data: "{'offset': 720110975, 'timeout': 20}" and files "None"
-2024-06-21 20:30:09,974 - DEBUG - Response for getUpdates: [200] "'{"ok":true,"result":[]}'"
-2024-06-21 20:30:10,078 - DEBUG - Make request: "getUpdates" with data: "{'offset': 720110975, 'timeout': 20}" and files "None"
-2024-06-21 20:30:30,136 - DEBUG - Response for getUpdates: [200] "'{"ok":true,"result":[]}'"
-2024-06-21 20:30:30,239 - DEBUG - Make request: "getUpdates" with data: "{'offset': 720110975, 'timeout': 20}" and files "None"
-2024-06-21 20:30:50,301 - DEBUG - Response for getUpdates: [200] "'{"ok":true,"result":[]}'"
-2024-06-21 20:30:50,405 - DEBUG - Make request: "getUpdates" with data: "{'offset': 720110975, 'timeout': 20}" and files "None"
-2024-06-21 20:31:10,468 - DEBUG - Response for getUpdates: [200] "'{"ok":true,"result":[]}'"
-2024-06-21 20:31:10,573 - DEBUG - Make request: "getUpdates" with data: "{'offset': 720110975, 'timeout': 20}" and files "None"
-2024-06-21 20:31:30,637 - DEBUG - Response for getUpdates: [200] "'{"ok":true,"result":[]}'"
-2024-06-21 20:31:30,741 - DEBUG - Make request: "getUpdates" with data: "{'offset': 720110975, 'timeout': 20}" and files "None"
-2024-06-21 20:31:50,881 - DEBUG - Response for getUpdates: [200] "'{"ok":true,"result":[]}'"
-2024-06-21 20:31:50,986 - DEBUG - Make request: "getUpdates" with data: "{'offset': 720110975, 'timeout': 20}" and files "None"
-2024-06-21 20:32:11,162 - DEBUG - Response for getUpdates: [200] "'{"ok":true,"result":[]}'"
-2024-06-21 20:32:11,265 - DEBUG - Make request: "getUpdates" with data: "{'offset': 720110975, 'timeout': 20}" and files "None"
-2024-06-21 20:32:31,430 - DEBUG - Response for getUpdates: [200] "'{"ok":true,"result":[]}'"
-2024-06-21 20:32:31,534 - DEBUG - Make request: "getUpdates" with data: "{'offset': 720110975, 'timeout': 20}" and files "None"
-2024-06-21 20:32:51,597 - DEBUG - Response for getUpdates: [200] "'{"ok":true,"result":[]}'"
-2024-06-21 20:32:51,702 - DEBUG - Make request: "getUpdates" with data: "{'offset': 720110975, 'timeout': 20}" and files "None"
-2024-06-21 20:33:11,771 - DEBUG - Response for getUpdates: [200] "'{"ok":true,"result":[]}'"
-2024-06-21 20:33:11,882 - DEBUG - Make request: "getUpdates" with data: "{'offset': 720110975, 'timeout': 20}" and files "None"
-2024-06-21 20:33:31,947 - DEBUG - Response for getUpdates: [200] "'{"ok":true,"result":[]}'"
-2024-06-21 20:33:32,050 - DEBUG - Make request: "getUpdates" with data: "{'offset': 720110975, 'timeout': 20}" and files "None"
-2024-06-21 20:33:52,123 - DEBUG - Response for getUpdates: [200] "'{"ok":true,"result":[]}'"
-2024-06-21 20:33:52,227 - DEBUG - Make request: "getUpdates" with data: "{'offset': 720110975, 'timeout': 20}" and files "None"
-2024-06-21 20:34:12,294 - DEBUG - Response for getUpdates: [200] "'{"ok":true,"result":[]}'"
-2024-06-21 20:34:12,397 - DEBUG - Make request: "getUpdates" with data: "{'offset': 720110975, 'timeout': 20}" and files "None"
-2024-06-21 20:34:32,456 - DEBUG - Response for getUpdates: [200] "'{"ok":true,"result":[]}'"
-2024-06-21 20:34:32,560 - DEBUG - Make request: "getUpdates" with data: "{'offset': 720110975, 'timeout': 20}" and files "None"
-2024-06-21 20:34:52,641 - DEBUG - Response for getUpdates: [200] "'{"ok":true,"result":[]}'"
-2024-06-21 20:34:52,745 - DEBUG - Make request: "getUpdates" with data: "{'offset': 720110975, 'timeout': 20}" and files "None"
-2024-06-21 20:35:12,915 - DEBUG - Response for getUpdates: [200] "'{"ok":true,"result":[]}'"
-2024-06-21 20:35:13,020 - DEBUG - Make request: "getUpdates" with data: "{'offset': 720110975, 'timeout': 20}" and files "None"
-2024-06-21 20:35:33,092 - DEBUG - Response for getUpdates: [200] "'{"ok":true,"result":[]}'"
-2024-06-21 20:35:33,197 - DEBUG - Make request: "getUpdates" with data: "{'offset': 720110975, 'timeout': 20}" and files "None"
-2024-06-21 20:35:53,367 - DEBUG - Response for getUpdates: [200] "'{"ok":true,"result":[]}'"
-2024-06-21 20:35:53,472 - DEBUG - Make request: "getUpdates" with data: "{'offset': 720110975, 'timeout': 20}" and files "None"
-2024-06-21 20:36:13,535 - DEBUG - Response for getUpdates: [200] "'{"ok":true,"result":[]}'"
-2024-06-21 20:36:13,639 - DEBUG - Make request: "getUpdates" with data: "{'offset': 720110975, 'timeout': 20}" and files "None"
-2024-06-21 20:36:33,704 - DEBUG - Response for getUpdates: [200] "'{"ok":true,"result":[]}'"
-2024-06-21 20:36:33,809 - DEBUG - Make request: "getUpdates" with data: "{'offset': 720110975, 'timeout': 20}" and files "None"
-2024-06-21 20:36:53,885 - DEBUG - Response for getUpdates: [200] "'{"ok":true,"result":[]}'"
-2024-06-21 20:36:53,989 - DEBUG - Make request: "getUpdates" with data: "{'offset': 720110975, 'timeout': 20}" and files "None"
-2024-06-21 20:37:14,162 - DEBUG - Response for getUpdates: [200] "'{"ok":true,"result":[]}'"
-2024-06-21 20:37:14,266 - DEBUG - Make request: "getUpdates" with data: "{'offset': 720110975, 'timeout': 20}" and files "None"
-2024-06-21 20:37:34,438 - DEBUG - Response for getUpdates: [200] "'{"ok":true,"result":[]}'"
-2024-06-21 20:37:34,543 - DEBUG - Make request: "getUpdates" with data: "{'offset': 720110975, 'timeout': 20}" and files "None"
-2024-06-21 20:37:54,606 - DEBUG - Response for getUpdates: [200] "'{"ok":true,"result":[]}'"
-2024-06-21 20:37:54,711 - DEBUG - Make request: "getUpdates" with data: "{'offset': 720110975, 'timeout': 20}" and files "None"
-2024-06-21 20:38:54,378 - DEBUG - Response for getUpdates: [200] "'{"ok":true,"result":[]}'"
-2024-06-21 20:38:54,484 - DEBUG - Make request: "getUpdates" with data: "{'offset': 720110975, 'timeout': 20}" and files "None"
-2024-06-21 20:39:14,601 - DEBUG - Response for getUpdates: [200] "'{"ok":true,"result":[]}'"
-2024-06-21 20:39:14,709 - DEBUG - Make request: "getUpdates" with data: "{'offset': 720110975, 'timeout': 20}" and files "None"
-2024-06-21 20:39:34,846 - DEBUG - Response for getUpdates: [200] "'{"ok":true,"result":[]}'"
-2024-06-21 20:39:34,949 - DEBUG - Make request: "getUpdates" with data: "{'offset': 720110975, 'timeout': 20}" and files "None"
-2024-06-21 20:39:55,124 - DEBUG - Response for getUpdates: [200] "'{"ok":true,"result":[]}'"
-2024-06-21 20:39:55,229 - DEBUG - Make request: "getUpdates" with data: "{'offset': 720110975, 'timeout': 20}" and files "None"
-2024-06-21 20:40:15,288 - DEBUG - Response for getUpdates: [200] "'{"ok":true,"result":[]}'"
-2024-06-21 20:40:15,391 - DEBUG - Make request: "getUpdates" with data: "{'offset': 720110975, 'timeout': 20}" and files "None"
-2024-06-21 20:40:35,480 - DEBUG - Response for getUpdates: [200] "'{"ok":true,"result":[]}'"
-2024-06-21 20:40:35,584 - DEBUG - Make request: "getUpdates" with data: "{'offset': 720110975, 'timeout': 20}" and files "None"
-2024-06-21 20:40:55,646 - DEBUG - Response for getUpdates: [200] "'{"ok":true,"result":[]}'"
-2024-06-21 20:40:55,751 - DEBUG - Make request: "getUpdates" with data: "{'offset': 720110975, 'timeout': 20}" and files "None"
-2024-06-21 20:41:15,816 - DEBUG - Response for getUpdates: [200] "'{"ok":true,"result":[]}'"
-2024-06-21 20:41:15,920 - DEBUG - Make request: "getUpdates" with data: "{'offset': 720110975, 'timeout': 20}" and files "None"
-2024-06-21 20:41:35,990 - DEBUG - Response for getUpdates: [200] "'{"ok":true,"result":[]}'"
-2024-06-21 20:41:36,093 - DEBUG - Make request: "getUpdates" with data: "{'offset': 720110975, 'timeout': 20}" and files "None"
-2024-06-21 20:41:56,151 - DEBUG - Response for getUpdates: [200] "'{"ok":true,"result":[]}'"
-2024-06-21 20:41:56,255 - DEBUG - Make request: "getUpdates" with data: "{'offset': 720110975, 'timeout': 20}" and files "None"
-2024-06-21 20:42:16,365 - DEBUG - Response for getUpdates: [200] "'{"ok":true,"result":[]}'"
-2024-06-21 20:42:16,469 - DEBUG - Make request: "getUpdates" with data: "{'offset': 720110975, 'timeout': 20}" and files "None"
-2024-06-21 20:42:36,556 - DEBUG - Response for getUpdates: [200] "'{"ok":true,"result":[]}'"
-2024-06-21 20:42:36,658 - DEBUG - Make request: "getUpdates" with data: "{'offset': 720110975, 'timeout': 20}" and files "None"
-2024-06-21 20:42:56,730 - DEBUG - Response for getUpdates: [200] "'{"ok":true,"result":[]}'"
-2024-06-21 20:42:56,834 - DEBUG - Make request: "getUpdates" with data: "{'offset': 720110975, 'timeout': 20}" and files "None"
-2024-06-21 20:43:16,957 - DEBUG - Response for getUpdates: [200] "'{"ok":true,"result":[]}'"
-2024-06-21 20:43:17,060 - DEBUG - Make request: "getUpdates" with data: "{'offset': 720110975, 'timeout': 20}" and files "None"
-2024-06-21 20:43:37,229 - DEBUG - Response for getUpdates: [200] "'{"ok":true,"result":[]}'"
-2024-06-21 20:43:37,333 - DEBUG - Make request: "getUpdates" with data: "{'offset': 720110975, 'timeout': 20}" and files "None"
-2024-06-21 20:43:57,410 - DEBUG - Response for getUpdates: [200] "'{"ok":true,"result":[]}'"
-2024-06-21 20:43:57,514 - DEBUG - Make request: "getUpdates" with data: "{'offset': 720110975, 'timeout': 20}" and files "None"
-2024-06-21 20:44:17,681 - DEBUG - Response for getUpdates: [200] "'{"ok":true,"result":[]}'"
-2024-06-21 20:44:17,786 - DEBUG - Make request: "getUpdates" with data: "{'offset': 720110975, 'timeout': 20}" and files "None"
-2024-06-21 20:44:23,433 - INFO - Stop polling...
-2024-06-21 20:44:23,437 - WARNING - Goodbye!
+2024-06-22 00:37:50,577 - DEBUG - Starting new HTTPS connection (1): disma.allparts.tech:443
+2024-06-22 00:37:50,803 - DEBUG - https://disma.allparts.tech:443 "GET /feeds/custom/XXGt4ekG2Jpib4v3u8y63a HTTP/1.1" 200 634962
+2024-06-22 00:37:51,455 - DEBUG - Starting new HTTPS connection (1): baz-on.ru:443
+2024-06-22 00:37:51,695 - DEBUG - https://baz-on.ru:443 "GET /export/c3383/712d7/gadnr-drom.csv HTTP/1.1" 200 None
+2024-06-22 00:37:51,871 - DEBUG - Starting new HTTPS connection (1): baz-on.ru:443
+2024-06-22 00:37:52,100 - DEBUG - https://baz-on.ru:443 "GET /export/c2933/17834/autoschrott-drom.csv HTTP/1.1" 200 None
+2024-06-22 00:37:52,178 - DEBUG - Using selector: KqueueSelector
+2024-06-22 00:37:52,179 - INFO - Scheduler started
+2024-06-22 00:37:52,179 - INFO - Added job "main_func" to job store "default"
+2024-06-22 00:37:52,179 - DEBUG - Looking for jobs to run
+2024-06-22 00:37:52,180 - DEBUG - Next wakeup is due at 2024-06-22 01:37:52.179670+03:00 (in 3599.999656 seconds)
+2024-06-22 00:37:52,180 - DEBUG - Looking for jobs to run
+2024-06-22 00:37:52,180 - DEBUG - Next wakeup is due at 2024-06-22 01:37:52.179670+03:00 (in 3599.999544 seconds)
+2024-06-22 00:37:52,180 - DEBUG - Make request: "getMe" with data: "{}" and files "None"
+2024-06-22 00:37:52,338 - DEBUG - Response for getMe: [200] "'{"ok":true,"result":{"id":6110702066,"is_bot":true,"first_name":"\\u0428\\u043a\\u043e\\u043b\\u0430 21 \\u0433\\u043e\\u0432\\u043d\\u043e","username":"school_21_govno_bot","can_join_groups":true,"can_read_all_group_messages":false,"supports_inline_queries":false,"can_connect_to_business":false}}'"
+2024-06-22 00:37:52,338 - INFO - Bot: Школа 21 говно [@school_21_govno_bot]
+2024-06-22 00:37:52,339 - INFO - Start polling.
+2024-06-22 00:37:52,339 - DEBUG - Make request: "getWebhookInfo" with data: "{}" and files "None"
+2024-06-22 00:37:52,394 - DEBUG - Response for getWebhookInfo: [200] "'{"ok":true,"result":{"url":"","has_custom_certificate":false,"pending_update_count":1,"allowed_updates":["message","callback_query"]}}'"
+2024-06-22 00:37:52,395 - DEBUG - Make request: "getUpdates" with data: "{'timeout': 20}" and files "None"
+2024-06-22 00:37:52,447 - DEBUG - Response for getUpdates: [200] "'{"ok":true,"result":[{"update_id":816758094,\n"message":{"message_id":346,"from":{"id":225529144,"is_bot":false,"first_name":"I","username":"igor_just_igor","language_code":"ru","is_premium":true},"chat":{"id":-1002152404451,"title":"\\u0442\\u0435\\u0441\\u0442\\u043e\\u0432\\u0430\\u044f","type":"supergroup"},"date":1719005871,"text":"\\u044b\\u0430"}}]}'"
+2024-06-22 00:37:52,447 - DEBUG - Received 1 updates.
+2024-06-22 00:37:52,549 - DEBUG - Make request: "getUpdates" with data: "{'offset': 816758095, 'timeout': 20}" and files "None"
+2024-06-22 00:37:56,513 - INFO - Stop polling...
+2024-06-22 00:37:56,516 - WARNING - Goodbye!

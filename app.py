@@ -48,6 +48,7 @@ async def handle_message(message: types.Message, state:FSMContext):
 # 20106 -- для ручных запросов
 @dp.message_handler()
 async def handle_message(message: types.Message, state:FSMContext):
+    print(message.chat.id)
     if message.message_thread_id ==20108:
         findBy=BotService.SearchFromAnotherBotMessage(message.text)
         res = SearchService.FindDetail(findBy)
@@ -61,7 +62,7 @@ async def handle_message(message: types.Message, state:FSMContext):
     elif message.message_thread_id==20106:
         res = SearchService.FindDetail(message.text)
         await BotService.SendMessageWithMediaGroup(bot, message,res)
-    elif (message.chat.type==types.ChatType.GROUP) and message.chat.id==1708030515:
+    elif (message.chat.type==types.ChatType.SUPERGROUP) and message.chat.id==-1001708030515:
         res = SearchService.FindDetail(message.text)
         await BotService.SendMessageWithMediaGroup(bot, message,res)
     elif message.chat.type=='private':
