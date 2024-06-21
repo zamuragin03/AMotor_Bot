@@ -61,6 +61,9 @@ async def handle_message(message: types.Message, state:FSMContext):
     elif message.message_thread_id==20106:
         res = SearchService.FindDetail(message.text)
         await BotService.SendMessageWithMediaGroup(bot, message,res)
+    elif (message.chat.type==types.ChatType.GROUP) and message.chat.id==1708030515:
+        res = SearchService.FindDetail(message.text)
+        await BotService.SendMessageWithMediaGroup(bot, message,res)
     elif message.chat.type=='private':
         res = SearchService.FindDetail(message.text)
         await BotService.SendMessageWithMediaGroup(bot, message,res)
